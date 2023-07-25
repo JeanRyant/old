@@ -1,38 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Git Rayos</title>
-  <link rel="stylesheet" href="styles.css">
-  <!-- Enlace al archivo reset.css -->
-  <link rel="stylesheet" href="reset.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Literaria - Cargando...</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="reset.css">
 </head>
 <body>
-  <header>
-    <h1>Mi SPA</h1>
-  </header>
-  <nav>
-    <ul>
-      <li><a href="#inicioo">Inicio</a></li>
-      <li><a href="#nosotros">Nosotros</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
-  <main>
-    <section id="inicio">
-      <h2>Bienvenido a Mi SPA</h2>
-      <p>Esta es la página de inicio de nuestra SPA.</p>
-    </section>
-    <section id="nosotros">
-      <h2>Nosotros</h2>
-      <p>En esta sección puedes conocer más sobre nosotros.</p>
-    </section>
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <p>Puedes ponerte en contacto con nosotros a través de este formulario.</p>
-    </section>
-  </main>
-  <script src="app.js"></script>
+    <div class="container">
+        <div class="loading">
+            <h2>¡Biblioteca Literaria!</h2>
+            <p>El sitio web se está cargando...</p>
+            <div class="loader"></div>
+        </div>
+        <div class="content">
+            <header>
+                <h1>Biblioteca Literaria</h1>
+            </header>
+
+            <main>
+                <section class="featured">
+                    <h2>Artículo destacado</h2>
+                    <a href="#">
+                        <h3>Título del artículo destacado</h3>
+                    </a>
+                </section>
+
+                <section class="articles">
+                    <h2>Últimos artículos</h2>
+                    <div class="article-list">
+                        <!-- Aquí puedes agregar los paneles con el efecto hover y el contenido de los artículos -->
+                    </div>
+                </section>
+
+                <section class="about">
+                    <h2>Acerca de nosotros</h2>
+                    <p>
+                        Somos un equipo apasionado por la literatura y la escritura. En Biblioteca Literaria,
+                        nos encanta compartir nuestras reflexiones, reseñas de libros, biografías de autores
+                        y todo lo relacionado con el mundo de las palabras. Nuestra misión es inspirar y conectar
+                        a los amantes de la literatura a través de nuestro contenido.
+                    </p>
+                </section>
+            </main>
+
+            <footer>
+                <p>Derechos de autor © 2023 Jean Ryant Ortega Anzo. Todos los derechos reservados.</p>
+            </footer>
+        </div>
+    </div>
 </body>
 </html>
