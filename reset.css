@@ -1,69 +1,68 @@
 /* Reset.css */
 body, h1, h2, h3, h4, h5, h6, p, ul, li {
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #dff9fb; /* Color de fondo */
-    color: #535c68; /* Color del texto principal */
-  }
-  
-  /* Estilos del encabezado */
-  header {
-    background-color: #30336b; /* Color de fondo del encabezado */
-    color: #dff9fb; /* Color del texto del encabezado */
-    padding: 20px;
-  }
-  
-  header h1 {
-    margin: 0;
-  }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  nav li {
-    display: inline-block;
-    margin-right: 20px;
-  }
-  
-  nav li a {
-    color: #dff9fb;
-    text-decoration: none;
-  }
-  
-  /* Estilos del contenido principal */
-  main {
-    padding: 20px;
-  }
-  
-  /* Estilos de los paneles */
-  .panel-left, .panel-right {
-    width: 200px;
-    height: 100%;
-    background-color: #95afc0; /* Color de fondo de los paneles */
-    color: #535c68; /* Color del texto de los paneles */
-    padding: 20px;
-  }
-  
-  .panel-left {
-    float: left;
-  }
-  
-  .panel-right {
-    float: right;
-  }
-  
-  /* Estilos del pie de página */
-  footer {
-    background-color: #130f40; /* Color de fondo del pie de página */
-    color: #dff9fb; /* Color del texto del pie de página */
-    padding: 10px;
-    text-align: center;
-  }
-  
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: black; /* Cambiar el color de fondo a negro */
+  color: white; /* Cambiar el color del texto principal a blanco */
+}
+
+/* Estilos del encabezado */
+header {
+  background-color: #30336b; /* Color de fondo del encabezado */
+  color: #dff9fb; /* Color del texto del encabezado */
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav li a {
+  color: #dff9fb;
+  text-decoration: none;
+}
+
+/* Estilos del contenido principal */
+main {
+  padding: 20px;
+}
+
+/* Estilos de los paneles */
+.panel-left, .panel-right {
+  width: 200px;
+  height: 100%;
+  background-color: #95afc0; /* Color de fondo de los paneles */
+  color: #535c68; /* Color del texto de los paneles */
+  padding: 20px;
+}
+
+.panel-left {
+  float: left;
+}
+
+.panel-right {
+  float: right;
+}
+
+/* Estilos del pie de página */
+footer {
+  background-color: #130f40; /* Color de fondo del pie de página */
+  color: #dff9fb; /* Color del texto del pie de página */
+  padding: 10px;
+  text-align: center;
+}
