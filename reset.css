@@ -6,63 +6,213 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li {
 
 body {
   font-family: Arial, sans-serif;
-  background-color: black; /* Cambiar el color de fondo a negro */
-  color: white; /* Cambiar el color del texto principal a blanco */
+  background-color: #0a3d62; /* Color de fondo más oscuro */
+  color: #dfe6e9; /* Color del texto principal más claro */
 }
 
 /* Estilos del encabezado */
 header {
-  background-color: #30336b; /* Color de fondo del encabezado */
-  color: #dff9fb; /* Color del texto del encabezado */
+  background-color: #0a3d62; /* Color de fondo del encabezado */
+  color: #dfe6e9; /* Color del texto del encabezado */
   padding: 20px;
+  border: 1px solid #3c6382; /* Borde sólido de color azul más obscuro */
+}
+
+header:hover {
+  border: 1px solid #60a3bc; /* Cambiar color del borde en el hover (más claro) */
 }
 
 header h1 {
+  font-family: "Times New Roman", serif;
   margin: 0;
 }
 
-nav ul {
+/* Estilos para el enlace del título */
+.Titulo1 a {
+  color: #82ccdd; /* Color del texto (más claro) */
+  text-decoration: none; /* Sin subrayado */
+}
+
+/* Navegador */
+.Navegador nav {
+  background-color: transparent; /* Fondo transparente */
+}
+
+.Navegador ul {
   list-style: none;
+  display: flex;
+  justify-content: center;
   padding: 0;
-  margin: 0;
 }
 
-nav li {
-  display: inline-block;
-  margin-right: 20px;
+.Navegador li {
+  margin: 0 15px;
 }
 
-nav li a {
-  color: #dff9fb;
+.Navegador li a {
+  color: #82ccdd; /* Texto en negro (más claro) */
   text-decoration: none;
+  padding: 10px 15px;
+  transition: color 0.3s ease; /* Efecto de transición en hover */
 }
 
-/* Estilos del contenido principal */
-main {
+.Navegador li a:hover {
+  color: #fff; /* Color del texto en hover (más claro) */
+}
+
+/* Estilos para la sección Artículos Reveladores */
+.articulos {
+  background-color: #0a3d62; /* Mismo color que el nav (más oscuro) */
+  color: #dfe6e9; /* Color del texto (más claro) */
   padding: 20px;
 }
 
-/* Estilos de los paneles */
-.panel-left, .panel-right {
-  width: 200px;
-  height: 100%;
-  background-color: #95afc0; /* Color de fondo de los paneles */
-  color: #535c68; /* Color del texto de los paneles */
-  padding: 20px;
+/* Estilos para la lista de artículos */
+.ListaDeArticulos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.panel-left {
-  float: left;
-}
-
-.panel-right {
-  float: right;
-}
-
-/* Estilos del pie de página */
-footer {
-  background-color: #130f40; /* Color de fondo del pie de página */
-  color: #dff9fb; /* Color del texto del pie de página */
+/* Estilos para cada artículo */
+.ListaDeArticulos article {
+  width: 430px;
+  max-width: 100%;
+  margin-bottom: 20px;
   padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Estilos para las imágenes dentro de los artículos */
+.ListaDeArticulos img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Estilos para los títulos dentro de los artículos */
+.ListaDeArticulos h4 {
+  font-family: "Arial", sans-serif; /* Tipo de letra */
+  color: #dfe6e9; /* Color del texto (más claro) */
+  margin-bottom: 10px;
+}
+
+/* Estilo para los enlaces visitados */
+.ListaDeArticulos a:visited {
+  color: #b2bec3; /* Color del texto para enlaces visitados (más claro) */
+}
+
+/* Estilos para los párrafos */
+.ListaDeArticulos p {
+  font-family: "Arial", sans-serif; /* Tipo de letra */
+  color: #dfe6e9; /* Color del texto (más claro) */
+  margin-bottom: 10px;
+  text-decoration: none; /* Sin subrayado para todos los párrafos */
+}
+
+/* Estilos para los párrafos dentro de un elemento strong */
+.ListaDeArticulos strong p {
+  text-decoration: none; /* Sin subrayado para los párrafos dentro de strong */
+}
+
+/* Estilos para los enlaces */
+.ListaDeArticulos a {
+  color: #82ccdd; /* Color del texto (más claro) */
+  text-decoration: none; /* Sin subrayado para los enlaces */
+}
+
+/* Estilo para los enlaces visitados */
+.ListaDeArticulos a:visited {
+  color: #b2bec3; /* Color del texto para enlaces visitados (más claro) */
+}
+
+
+/* Estilos del acerca de nosotros */
+.about {
+  margin-top: 30px;
+}
+
+.about h2 {
+  margin-bottom: 20px;
+}
+
+.Banner {
+  width: 100%;
+  max-width: 100%;
+}
+
+.Banner img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* Estilos para el título 1 */
+.Titulo1 {
+  text-align: center; /* Centrar el contenido del div */
+  margin: 20px 0; /* Agregar un margen superior e inferior para separar el título */
+}
+
+.Titulo1 h1 {
+  font-family: "Times New Roman", serif;
+  font-size: 36px; /* Tamaño de fuente del título */
+  font-weight: bold; /* Negrita */
+}
+
+/* Estilos para la sección Acerca de nosotros */
+.nosotros {
+  background-color: #636e72; /* Mismo color que el nav (más oscuro) */
+  color: #dfe6e9; /* Color del texto (más claro) */
+  padding: 20px;
+  text-align: center; /* Centrar el contenido */
+}
+
+/* Estilos para el párrafo dentro de la sección Acerca de nosotros */
+.nosotros p {
+  font-family: "Arial", sans-serif;
   text-align: center;
+}
+
+/* Media Queries para ajustar el tamaño en dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .ListaDeArticulos article {
+      width: 100%;
+  }
+
+  .nosotros {
+      padding: 10px; /* Reducir el padding para dispositivos móviles */
+  }
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Agregar esta propiedad para separar el contenido */
+  background-color: #000; /* Color de fondo del footer (más oscuro) */
+  color: #dfe6e9; /* Color del texto del footer (más claro) */
+  padding: 10px;
+}
+
+.redes-sociales {
+  display: flex;
+  align-items: center;
+}
+
+.redes-sociales a {
+  color: #dfe6e9; /* Color del texto (más claro) */
+  text-decoration: none;
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+/* Media Queries para ajustar el tamaño en dispositivos móviles */
+@media screen and (max-width: 768px) {
+  footer {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .redes-sociales {
+      margin-bottom: 10px;
+  }
 }
