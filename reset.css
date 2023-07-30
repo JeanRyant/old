@@ -14,7 +14,7 @@ body {
 header {
   background-color: #0a3d62; /* Color de fondo del encabezado */
   color: #dfe6e9; /* Color del texto del encabezado */
-  padding: 20px;
+  padding: 0 px;
   border: 1px solid #3c6382; /* Borde sólido de color azul más obscuro */
 }
 
@@ -33,107 +33,86 @@ header h1 {
   text-decoration: none; /* Sin subrayado */
 }
 
-/* Estilos predeterminados para el botón, se oculta en pantallas grandes */
-.menu-btn {
-  display: none;
-  position: relative;
-  margin-top: 20px; /* Ajustar el espacio entre el botón y el h1 */
-  z-index: 999;
-  background-color: #3498db; /* Color de fondo del botón en dispositivos pequeños */
-  color: #fff; /* Color del texto del botón en dispositivos pequeños */
-  padding: 10px 15px;
-  border: none;
-  cursor: pointer;
-}
-
-.menu-btn span {
-  display: inline-block;
-  margin-left: 10px;
-}
-
 /* Estilos para el navegador en modo horizontal para pantallas grandes (mayor a 1024px) */
 @media screen and (min-width: 1025px) {
-  .Navegador {
+  .Navegador--large {
     display: flex;
     justify-content: center; /* Centrar horizontalmente el contenido */
   }
 
-  .Navegador nav {
+  .Navegador--large nav {
     display: flex;
     align-items: center; /* Centrar verticalmente el contenido */
   }
 
-  .Navegador ul {
+  .Navegador--large ul {
     list-style: none;
     display: flex;
     align-items: center; /* Centrar verticalmente el contenido */
   }
 
-  .Navegador li {
+  .Navegador--large li {
     margin: 0 15px;
   }
 
-  .Navegador li a {
+  .Navegador--large li a {
     color: #82ccdd;
     text-decoration: none;
     padding: 10px 15px;
     transition: color 0.3s ease;
   }
 
-  .Navegador li a:hover {
+  .Navegador--large li a:hover {
     color: #fff;
   }
 }
 
-
 /* Estilos para el navegador en modo vertical para pantallas pequeñas (hasta 1024px) */
 @media screen and (max-width: 1024px) {
-  /* Mostrar el botón de menú solo en dispositivos móviles */
-  .menu-btn {
-    display: block; /* Mostrar el botón */
-    background-color: #0a3d62; /* Cambiar el color de fondo del botón en dispositivos pequeños */
-    font-size: 16px; /* Tamaño de fuente del botón en dispositivos pequeños */
-    padding: 12px 20px; /* Espaciado interior del botón en dispositivos pequeños */
-    margin: 0 auto; /* Centrar horizontalmente el botón utilizando margen automático */
+  .Navegador--large {
+    display: none; /* Ocultar el navegador grande */
   }
 
-  .menu-btn span {
-    margin-left: 5px; /* Reducir el espacio entre el ícono y el texto en dispositivos pequeños */
+  .Navegador--small {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente el contenido */
   }
 
-  /* Ocultar el menú horizontal en pantallas pequeñas */
-  .Navegador nav {
-    display: none; /* Ocultar el menú horizontal */
-  }
-
-  /* Estilos para el navegador en modo vertical */
-  .Navegador.show-menu nav {
-    display: block; /* Mostrar el menú vertical */
-    background-color: #0a3d62; /* Cambiar el color de fondo del menú vertical */
-    padding: 10px; /* Espaciado interior del menú vertical */
-  }
-
-  .Navegador.show-menu ul {
+  .Navegador--small nav {
     display: flex;
     flex-direction: column; /* Alinear los elementos del menú vertical en columna */
     align-items: center; /* Centrar los elementos horizontalmente dentro del menú */
   }
 
-  .Navegador.show-menu li {
+  .Navegador--small ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Alinear los elementos del menú vertical en columna */
+    align-items: center; /* Centrar los elementos horizontalmente dentro del menú */
+  }
+
+  .Navegador--small li {
     margin: 10px 0; /* Añadir espacio vertical entre los elementos del menú */
   }
 
-  .Navegador.show-menu li a {
-    color: #82ccdd; /* Color de texto del menú desplegable en dispositivos pequeños */
+  .Navegador--small li a {
+    color: #82ccdd; /* Nuevo color del texto para enlaces del menú pequeño */
     padding: 8px 15px; /* Espaciado interior del menú desplegable en dispositivos pequeños */
+    text-decoration: none; /* Quitar el subrayado del enlace */
+    list-style: none; /* Quitar los puntos de lista */
+    font-family: 'Arial', sans-serif; /* Nuevo tipo de letra */
+    font-size: 20px; /* Nuevo tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    transition: color 0.3s ease; /* Efecto de transición en el cambio de color */
   }
 
-  .Navegador.show-menu li a:hover {
-    color: #fff; /* Color de texto del menú desplegable al pasar el mouse en dispositivos pequeños */
+  .Navegador--small li a:hover {
+    color: #fff; /* Nuevo color del texto al pasar el cursor sobre los enlaces */
+    background-color: #000; /* Nuevo color de fondo al pasar el cursor sobre los enlaces */
+    border-radius: 5px; /* Agregar bordes redondeados al menú desplegable */
+    padding: 8px 15px; /* Ajustar el espaciado del menú desplegable al pasar el cursor */
   }
 }
-
-
   
 /* Estilos para la sección Artículos Reveladores */
 .articulos {
