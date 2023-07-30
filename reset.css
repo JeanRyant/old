@@ -126,7 +126,6 @@ header h1 {
   color: #b2bec3; /* Color del texto para enlaces visitados (más claro) */
 }
 
-
 /* Estilos del acerca de nosotros */
 .about {
   margin-top: 30px;
@@ -145,7 +144,6 @@ header h1 {
   width: 100%;
   height: auto;
 }
-
 
 /* Estilos para el título 1 */
 .Titulo1 {
@@ -173,17 +171,6 @@ header h1 {
   text-align: center;
 }
 
-/* Media Queries para ajustar el tamaño en dispositivos móviles */
-@media screen and (max-width: 768px) {
-  .ListaDeArticulos article {
-      width: 100%;
-  }
-
-  .nosotros {
-      padding: 10px; /* Reducir el padding para dispositivos móviles */
-  }
-}
-
 footer {
   display: flex;
   align-items: center;
@@ -203,16 +190,4 @@ footer {
   text-decoration: none;
   font-size: 24px;
   margin-right: 10px;
-}
-
-/* Media Queries para ajustar el tamaño en dispositivos móviles */
-@media screen and (max-width: 768px) {
-  footer {
-      flex-direction: column;
-      text-align: center;
-  }
-
-  .redes-sociales {
-      margin-bottom: 10px;
-  }
 }
