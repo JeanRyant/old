@@ -113,7 +113,21 @@ header h1 {
     padding: 8px 15px; /* Ajustar el espaciado del menú desplegable al pasar el cursor */
   }
 }
-  
+
+/* Estilos para el Navegador de dispositivos grandes (mayor a 1024px) */
+@media screen and (min-width: 1025px) {
+  .Navegador--small {
+    display: none; /* Ocultar el Navegador de dispositivos pequeños */
+  }
+}
+
+/* Estilos para el Navegador de dispositivos pequeños (hasta 1024px) */
+@media screen and (max-width: 1024px) {
+  .Navegador--large {
+    display: none; /* Ocultar el Navegador de dispositivos grandes */
+  }
+}
+
 /* Estilos para la sección Artículos Reveladores */
 .articulos {
   background-color: #0a3d62; /* Mismo color que el nav (más oscuro) */
