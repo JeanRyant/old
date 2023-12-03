@@ -88,83 +88,156 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-
 //Codigo para la Vida de Autores
 
 document.addEventListener('DOMContentLoaded', function() {
-    var navVida = document.querySelectorAll('.nav-vida');
-    var content = document.getElementById('contenido');
+  var navVida = document.querySelectorAll('.nav-vida');
+  var content = document.getElementById('contenido');
 
-    navVida.forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            var page = this.getAttribute('data-page');
-            content.innerHTML = '';
-            loadPage(page);
-        });
-    });
+  navVida.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+          e.preventDefault();
+          var page = this.getAttribute('data-page');
+          content.innerHTML = '';
+          loadPage(page);
+      });
+  });
 
-    function loadPage(page) {
-        content.innerHTML = '<h1>Bienvenido a la página de Vida de Autores</h1>';
-    }
+  function loadPage(page) {
+      import('./vida_de_autores.js')
+      .then((module) => {
+          const vidas = module.vidas;
+          mostrarTitulos(vidas);
+      })
+      .catch((error) => {
+          console.error('Error al importar el módulo:', error);
+      });
+  }
+
+  function mostrarTitulos(vidas) {
+      const contenidoDiv = document.getElementById('contenido');
+      contenidoDiv.innerHTML = '';
+
+      for (let vida in vidas) {
+          const p = document.createElement('p');
+          p.textContent = vidas[vida].titulo;
+          contenidoDiv.appendChild(p);
+      }
+  }
 });
+
 
 //Codigo para las Reseñas de Libros
 
 document.addEventListener('DOMContentLoaded', function() {
-    var navReseñas = document.querySelectorAll('.nav-reseñas');
-    var content = document.getElementById('contenido');
+  var navReseñas = document.querySelectorAll('.nav-reseñas');
+  var content = document.getElementById('contenido');
 
-    navReseñas.forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            var page = this.getAttribute('data-page');
-            content.innerHTML = '';
-            loadPage(page);
-        });
-    });
+  navReseñas.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+          e.preventDefault();
+          var page = this.getAttribute('data-page');
+          content.innerHTML = '';
+          loadPage(page);
+      });
+  });
 
-    function loadPage(page) {
-        content.innerHTML = '<h1>Bienvenido a la página de Reseñas de Libros</h1>';
-    }
+  function loadPage(page) {
+      import('./resenas_de_libros.js')
+      .then((module) => {
+          const reseña = module.reseña;
+          mostrarTitulos(reseña);
+      })
+      .catch((error) => {
+          console.error('Error al importar el módulo:', error);
+      });
+  }
+
+  function mostrarTitulos(reseña) {
+      const contenidoDiv = document.getElementById('contenido');
+      contenidoDiv.innerHTML = '';
+
+      for (let vida in reseña) {
+          const p = document.createElement('p');
+          p.textContent = reseña[vida].titulo;
+          contenidoDiv.appendChild(p);
+      }
+  }
 });
+
 
 //Codigo de Escritura Creativa
 
 document.addEventListener('DOMContentLoaded', function() {
-    var navEscritura = document.querySelectorAll('.nav-escritura');
-    var content = document.getElementById('contenido');
+  var navEscritura = document.querySelectorAll('.nav-escritura');
+  var content = document.getElementById('contenido');
 
-    navEscritura.forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            var page = this.getAttribute('data-page');
-            content.innerHTML = '';
-            loadPage(page);
-        });
-    });
+  navEscritura.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+          e.preventDefault();
+          var page = this.getAttribute('data-page');
+          content.innerHTML = '';
+          loadPage(page);
+      });
+  });
 
-    function loadPage(page) {
-        content.innerHTML = '<h1>Bienvenido a la página de Escritura Creativa</h1>';
-    }
+  function loadPage(page) {
+      import('./escritura_crativa.js')
+      .then((module) => {
+          const escritura = module.escritura;
+          mostrarTitulos(escritura);
+      })
+      .catch((error) => {
+          console.error('Error al importar el módulo:', error);
+      });
+  }
+
+  function mostrarTitulos(escritura) {
+      const contenidoDiv = document.getElementById('contenido');
+      contenidoDiv.innerHTML = '';
+
+      for (let vida in escritura) {
+          const p = document.createElement('p');
+          p.textContent = escritura[vida].titulo;
+          contenidoDiv.appendChild(p);
+      }
+  }
 });
 
 //Codigo de la Crea tu Libreria
 
 document.addEventListener('DOMContentLoaded', function() {
-    var navCrea = document.querySelectorAll('.nav-crea');
-    var content = document.getElementById('contenido');
+  var navCrea = document.querySelectorAll('.nav-crea');
+  var content = document.getElementById('contenido');
 
-    navCrea.forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            var page = this.getAttribute('data-page');
-            content.innerHTML = '';
-            loadPage(page);
-        });
-    });
+  navCrea.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+          e.preventDefault();
+          var page = this.getAttribute('data-page');
+          content.innerHTML = '';
+          loadPage(page);
+      });
+  });
 
-    function loadPage(page) {
-        content.innerHTML = '<h1>Bienvenido a la página de Crea tu Libreria</h1>';
-    }
+  function loadPage(page) {
+      import('./crea_tu_libreria.js')
+      .then((module) => {
+          const crea = module.crea;
+          mostrarTitulos(crea);
+      })
+      .catch((error) => {
+          console.error('Error al importar el módulo:', error);
+      });
+  }
+
+  function mostrarTitulos(crea) {
+      const contenidoDiv = document.getElementById('contenido');
+      contenidoDiv.innerHTML = '';
+
+      for (let vida in crea) {
+          const p = document.createElement('p');
+          p.textContent = crea[vida].titulo;
+          contenidoDiv.appendChild(p);
+      }
+  }
 });
