@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   });
 
-  function loadPage(page) {
+    function loadPage(page) {
       import('./vida_de_autores.js')
       .then((module) => {
           const vidas = module.vidas;
@@ -114,16 +114,38 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   }
 
-  function mostrarTitulos(vidas) {
-      const contenidoDiv = document.getElementById('contenido');
-      contenidoDiv.innerHTML = '';
+    function mostrarTitulos(vidas) {
+        const contenidoDiv = document.getElementById('contenido');
+        contenidoDiv.innerHTML = '';
 
-      for (let vida in vidas) {
-          const p = document.createElement('p');
-          p.textContent = vidas[vida].titulo;
-          contenidoDiv.appendChild(p);
-      }
-  }
+        // Supongamos que el dominio base es "https://tudominio.com"
+        const dominioBaseVida = "/vida_de_autores";
+
+        // Crear una lista desordenada (ul)
+        const listaVida = document.createElement('ul');
+
+        for (let vida in vidas) {
+            // Crear un elemento de lista (li)
+            const listItemVida = document.createElement('li');
+
+            // Crear el enlace (a)
+            const a = document.createElement('a');
+            a.textContent = vidas[vida].titulo;
+
+            // Agregar el dominio base y la propiedad 'directorio' como href
+            a.href = dominioBaseVida + vidas[vida].directorio;
+
+            // Agregar el enlace al elemento de lista
+            listItemVida.appendChild(a);
+
+            // Agregar el elemento de lista a la lista desordenada
+            listaVida.appendChild(listItemVida);
+        }
+
+        // Agregar la lista desordenada al contenidoDiv
+        contenidoDiv.appendChild(listaVida);
+    }
+
 });
 
 
@@ -143,25 +165,46 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   function loadPage(page) {
-      import('./resenas_de_libros.js')
-      .then((module) => {
-          const reseña = module.reseña;
-          mostrarTitulos(reseña);
-      })
-      .catch((error) => {
-          console.error('Error al importar el módulo:', error);
-      });
-  }
+    import('./resenas_de_libros.js')
+    .then((module) => {
+        const reseña = module.reseña;
+        mostrarTitulos(reseña);
+    })
+    .catch((error) => {
+        console.error('Error al importar el módulo:', error);
+    });
+}
 
-  function mostrarTitulos(reseña) {
+  function mostrarTitulos(reseñas) {
       const contenidoDiv = document.getElementById('contenido');
       contenidoDiv.innerHTML = '';
 
-      for (let vida in reseña) {
-          const p = document.createElement('p');
-          p.textContent = reseña[vida].titulo;
-          contenidoDiv.appendChild(p);
+      // Supongamos que el dominio base es "https://tudominio.com"
+      const dominioBaseReseña = "/resenas_de_libros";
+
+      // Crear una lista desordenada (ul)
+      const listaReseña = document.createElement('ul');
+
+      for (let reseña in reseñas) {
+          // Crear un elemento de lista (li)
+          const listItemReseña = document.createElement('li');
+
+          // Crear el enlace (a)
+          const a = document.createElement('a');
+          a.textContent = reseñas[reseña].titulo;
+
+          // Agregar el dominio base y la propiedad 'directorio' como href
+          a.href = dominioBaseReseña + reseñas[reseña].directorio;
+
+          // Agregar el enlace al elemento de lista
+          listItemReseña.appendChild(a);
+
+          // Agregar el elemento de lista a la lista desordenada
+          listaReseña.appendChild(listItemReseña);
       }
+
+      // Agregar la lista desordenada al contenidoDiv
+      contenidoDiv.appendChild(listaReseña);
   }
 });
 
@@ -182,25 +225,46 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   function loadPage(page) {
-      import('./escritura_crativa.js')
-      .then((module) => {
-          const escritura = module.escritura;
-          mostrarTitulos(escritura);
-      })
-      .catch((error) => {
-          console.error('Error al importar el módulo:', error);
-      });
-  }
+    import('./escritura_crativa.js')
+    .then((module) => {
+        const escrituras = module.escrituras;
+        mostrarTitulos(escrituras);
+    })
+    .catch((error) => {
+        console.error('Error al importar el módulo:', error);
+    });
+}
 
-  function mostrarTitulos(escritura) {
+  function mostrarTitulos(escrituras) {
       const contenidoDiv = document.getElementById('contenido');
       contenidoDiv.innerHTML = '';
 
-      for (let vida in escritura) {
-          const p = document.createElement('p');
-          p.textContent = escritura[vida].titulo;
-          contenidoDiv.appendChild(p);
+      // Supongamos que el dominio base es "https://tudominio.com"
+      const dominioBaseEscritura = "/escritura_crativa";
+
+      // Crear una lista desordenada (ul)
+      const listaEscritura = document.createElement('ul');
+
+      for (let escritura in escrituras) {
+          // Crear un elemento de lista (li)
+          const listItemEscritura = document.createElement('li');
+
+          // Crear el enlace (a)
+          const a = document.createElement('a');
+          a.textContent = escrituras[escritura].titulo;
+
+          // Agregar el dominio base y la propiedad 'directorio' como href
+          a.href = dominioBaseEscritura + escrituras[escritura].directorio;
+
+          // Agregar el enlace al elemento de lista
+          listItemEscritura.appendChild(a);
+
+          // Agregar el elemento de lista a la lista desordenada
+          listaEscritura.appendChild(listItemEscritura);
       }
+
+      // Agregar la lista desordenada al contenidoDiv
+      contenidoDiv.appendChild(listaEscritura);
   }
 });
 
@@ -220,24 +284,45 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   function loadPage(page) {
-      import('./crea_tu_libreria.js')
-      .then((module) => {
-          const crea = module.crea;
-          mostrarTitulos(crea);
-      })
-      .catch((error) => {
-          console.error('Error al importar el módulo:', error);
-      });
-  }
+    import('./crea_tu_libreria.js')
+    .then((module) => {
+        const crea = module.crea;
+        mostrarTitulos(crea);
+    })
+    .catch((error) => {
+        console.error('Error al importar el módulo:', error);
+    });
+}
 
   function mostrarTitulos(crea) {
       const contenidoDiv = document.getElementById('contenido');
       contenidoDiv.innerHTML = '';
 
-      for (let vida in crea) {
-          const p = document.createElement('p');
-          p.textContent = crea[vida].titulo;
-          contenidoDiv.appendChild(p);
+      // Supongamos que el dominio base es "https://tudominio.com"
+      const dominioBaseCre = "/crea_tu_libreria";
+
+      // Crear una lista desordenada (ul)
+      const listaCre = document.createElement('ul');
+
+      for (let cre in crea) {
+          // Crear un elemento de lista (li)
+          const listItemCre = document.createElement('li');
+
+          // Crear el enlace (a)
+          const a = document.createElement('a');
+          a.textContent = crea[cre].titulo;
+
+          // Agregar el dominio base y la propiedad 'directorio' como href
+          a.href = dominioBaseCre + crea[cre].directorio;
+
+          // Agregar el enlace al elemento de lista
+          listItemCre.appendChild(a);
+
+          // Agregar el elemento de lista a la lista desordenada
+          listaCre.appendChild(listItemCre);
       }
+
+      // Agregar la lista desordenada al contenidoDiv
+      contenidoDiv.appendChild(listaCre);
   }
 });

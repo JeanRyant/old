@@ -1,30 +1,30 @@
 export const reseña = {
-    vida1: {
+    reseña1: {
         "titulo": "La senda del perdedor",
         "contenido": "Este es el contenido de la biografía de Charles Bukowski",
         "nombre del autor": "Charles Bukowski",
         "nombre del escritor": "Jean Ryant Ortega Anzo",
-        "directorio": "/charles_bukowski"
+        "directorio": "/la_senda_del_perdedor"
     },
-    vida2: {
+    reseña2: {
         "titulo": "Ana Karenina",
         "contenido": "Este es el contenido de la biografía de Charles Bukowski",
         "nombre del autor": "Leon Tolstoi",
         "nombre del escritor": "Jean Ryant Ortega Anzo",
-        "directorio": "/leon_tolstoi"
+        "directorio": "/ana_Karenina"
     },
-    vida3: {
+    reseña3: {
         "titulo": "Arlequin",
         "contenido": "Este es el contenido de la biografía de Charles Bukowski",
         "nombre del autor": "Morris West",
         "nombre del escritor": "Jean Ryant Ortega Anzo",
-        "directorio": "/morris_west"
+        "directorio": "/arlequin"
     },
-    vida4: {
+    reseña4: {
         "titulo": "El psicoanalista",
         "contenido": "Este es el contenido de la biografía de Charles Bukowski",
         "nombre del autor": "John Katzenbach",
         "nombre del escritor": "Jean Ryant Ortega Anzo",
-        "directorio": "/john_katzenbach"
+        "directorio": "/el_psicoanalista"
     }
 };
