@@ -1,7 +1,7 @@
 export const reseña = {
     reseña1: {
         "titulo": "La senda del perdedor",
-        "contenido": "Este es el contenido de la biografía de Charles Bukowski",
+        "contenido": "Este es uno de los libros que me dio una vuelta de 180% grados a mi vida, se que no es una buena idea contrastar acciones, con la relidad economica",
         "nombre del autor": "Charles Bukowski",
         "nombre del escritor": "Jean Ryant Ortega Anzo",
         "directorio": "/la_senda_del_perdedor"
