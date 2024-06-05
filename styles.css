@@ -39,136 +39,17 @@ header h2 {
     text-decoration: none; /* Sin subrayado */
 }
 
-/* Estilos para el navegador en modo horizontal para pantallas grandes (mayor a 1024px) */
-@media screen and (min-width: 1025px) {
-    .Navegador--large {
-        display: flex;
-        justify-content: center; /* Centrar horizontalmente el contenido */
+/* Estilo para el enfoque horizontal en hover */
+@media only screen and (min-width: 768px) {
+    ul li {
+      display: inline-block;
+      margin-right: 20px; /* Espacio entre elementos */
     }
 
-    .Navegador--large nav {
-        display: flex;
-        align-items: center; /* Centrar verticalmente el contenido */
+    ul li:hover {
+      transform: translateX(5px); /* Movimiento horizontal en hover */
     }
-
-    .Navegador--large ul {
-        list-style: none;
-        display: flex;
-        align-items: center; /* Centrar verticalmente el contenido */
-    }
-
-    .Navegador--large li {
-        margin: 0 15px;
-    }
-
-    .Navegador--large li a {
-        color: #82ccdd;
-        text-decoration: none;
-        padding: 10px 15px;
-        transition: color 0.3s ease;
-    }
-
-    .Navegador--large li a:hover {
-        color: #fff;
-    }
-}
-
-/* Estilos para el navegador en modo vertical para pantallas pequeñas (hasta 1024px) */
-@media screen and (max-width: 1024px) {
-    .Navegador--large {
-        display: none; /* Ocultar el navegador grande */
-    }
-
-    .Navegador--small {
-        display: flex;
-        justify-content: center; /* Centrar horizontalmente el contenido */
-    }
-
-    .Navegador--small nav {
-        display: flex;
-        flex-direction: column; /* Alinear los elementos del menú vertical en columna */
-        align-items: center; /* Centrar los elementos horizontalmente dentro del menú */
-    }
-
-    .Navegador--small ul {
-        list-style: none;
-        display: flex;
-        flex-direction: column; /* Alinear los elementos del menú vertical en columna */
-        align-items: center; /* Centrar los elementos horizontalmente dentro del menú */
-    }
-
-    .Navegador--small li {
-        margin: 10px 0; /* Añadir espacio vertical entre los elementos del menú */
-    }
-
-    .Navegador--small li a {
-        color: #82ccdd; /* Nuevo color del texto para enlaces del menú pequeño */
-        padding: 8px 15px; /* Espaciado interior del menú desplegable en dispositivos pequeños */
-        text-decoration: none; /* Quitar el subrayado del enlace */
-        list-style: none; /* Quitar los puntos de lista */
-        font-family: 'Arial', sans-serif; /* Nuevo tipo de letra */
-        font-size: 20px; /* Nuevo tamaño de fuente */
-        font-weight: bold; /* Negrita */
-        transition: color 0.3s ease; /* Efecto de transición en el cambio de color */
-    }
-
-    .Navegador--small li a:hover {
-        color: #fff; /* Nuevo color del texto al pasar el cursor sobre los enlaces */
-        background-color: #000; /* Nuevo color de fondo al pasar el cursor sobre los enlaces */
-        border-radius: 5px; /* Agregar bordes redondeados al menú desplegable */
-        padding: 8px 15px; /* Ajustar el espaciado del menú desplegable al pasar el cursor */
-    }
-}
-
-/* Estilos para el Navegador de dispositivos grandes (mayor a 1024px) */
-@media screen and (min-width: 1025px) {
-    .Navegador--small {
-        display: none; /* Ocultar el Navegador de dispositivos pequeños */
-    }
-}
-
-/* Estilos para el Navegador de dispositivos pequeños (hasta 1024px) */
-@media screen and (max-width: 1024px) {
-    .Navegador--large {
-        display: none; /* Ocultar el Navegador de dispositivos grandes */
-    }
-}
-
-/* Estilos para el navegador */
-.Navegador--large ul {
-    list-style: none; /* Quitar los puntos de lista */
-    display: flex;
-    align-items: center; /* Centrar verticalmente el contenido */
-}
-
-.Navegador--large li {
-    margin: 0 15px;
-    position: relative; /* Agregar posición relativa para el enfoque horizontal en hover */
-}
-
-.Navegador--large li a {
-    color: #82ccdd;
-    text-decoration: none;
-    padding: 10px 15px;
-    transition: color 0.3s ease;
-    display: block; /* Convertir enlaces en bloques para ocupar todo el espacio disponible */
-}
-
-.Navegador--large li::before {
-    content: '';
-    position: absolute;
-    bottom: -2px; /* Ajustar la posición del efecto de hover */
-    left: 0;
-    width: 100%;
-    height: 2px; /* Grosor del efecto de hover */
-    background-color: transparent; /* Color inicial del efecto de hover */
-    transition: background-color 0.3s ease; /* Transición del color del efecto de hover */
-}
-
-.Navegador--large li:hover::before {
-    background-color: #82ccdd; /* Color del efecto de hover al pasar el cursor sobre el enlace */
-}
-
+  }
 /* Estilos para la sección Artículos Reveladores */
 .articulos {
     background-color: #0a3d62; /* Mismo color que el nav (más oscuro) */
