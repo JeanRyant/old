@@ -1,276 +1,300 @@
-/* styles.css */
 body, h1, h2, h3, h4, h5, h6, p, ul, li {
     margin: 0;
     padding: 0;
-  }
-  
-  body {
+}
+
+body {
     font-family: Arial, sans-serif;
     background-color: #0a3d62; /* Color de fondo más oscuro */
     color: #dfe6e9; /* Color del texto principal más claro */
-  }
-  
-  /* Estilos del encabezado */
-  header {
+}
+
+/* Estilos del encabezado */
+header {
     background-color: #0a3d62; /* Color de fondo del encabezado */
     color: #dfe6e9; /* Color del texto del encabezado */
-    padding: 0 px;
-    border: 1px solid #3c6382; /* Borde sólido de color azul más obscuro */
-  }
-  
-  header:hover {
+    padding: 20px;
+    border: 1px solid #3c6382; /* Borde sólido de color azul más oscuro */
+}
+
+header:hover {
     border: 1px solid #60a3bc; /* Cambiar color del borde en el hover (más claro) */
-  }
-  
-  header h1 {
+}
+
+header h1 {
     font-family: "Times New Roman", serif;
+    font-size: x-small 56px;
     margin: 0;
-  }
-  
-  /* Estilos para el enlace del título */
-  .Titulo1 a {
+}
+
+header h2 {
+    font-family: "Times New Roman", serif;
+    font-size: x-small 32px;
+    margin: 0;
+}
+
+/* Estilos para el enlace del título */
+.Titulo1 a {
     color: #82ccdd; /* Color del texto (más claro) */
     text-decoration: none; /* Sin subrayado */
-  }
-  
-  /* Estilos para el navegador en modo horizontal para pantallas grandes (mayor a 1024px) */
-  @media screen and (min-width: 1025px) {
+}
+
+/* Estilos para el navegador en modo horizontal para pantallas grandes (mayor a 1024px) */
+@media screen and (min-width: 1025px) {
     .Navegador--large {
-      display: flex;
-      justify-content: center; /* Centrar horizontalmente el contenido */
+        display: flex;
+        justify-content: center; /* Centrar horizontalmente el contenido */
     }
-  
+
     .Navegador--large nav {
-      display: flex;
-      align-items: center; /* Centrar verticalmente el contenido */
+        display: flex;
+        align-items: center; /* Centrar verticalmente el contenido */
     }
-  
+
     .Navegador--large ul {
-      list-style: none;
-      display: flex;
-      align-items: center; /* Centrar verticalmente el contenido */
+        list-style: none;
+        display: flex;
+        align-items: center; /* Centrar verticalmente el contenido */
     }
-  
+
     .Navegador--large li {
-      margin: 0 15px;
+        margin: 0 15px;
     }
-  
+
     .Navegador--large li a {
-      color: #82ccdd;
-      text-decoration: none;
-      padding: 10px 15px;
-      transition: color 0.3s ease;
+        color: #82ccdd;
+        text-decoration: none;
+        padding: 10px 15px;
+        transition: color 0.3s ease;
     }
-  
+
     .Navegador--large li a:hover {
-      color: #fff;
+        color: #fff;
     }
-  }
-  
-  /* Estilos para el navegador en modo vertical para pantallas pequeñas (hasta 1024px) */
-  @media screen and (max-width: 1024px) {
+}
+
+/* Estilos para el navegador en modo vertical para pantallas pequeñas (hasta 1024px) */
+@media screen and (max-width: 1024px) {
     .Navegador--large {
-      display: none; /* Ocultar el navegador grande */
+        display: none; /* Ocultar el navegador grande */
     }
-  
+
     .Navegador--small {
-      display: flex;
-      justify-content: center; /* Centrar horizontalmente el contenido */
+        display: flex;
+        justify-content: center; /* Centrar horizontalmente el contenido */
     }
-  
+
     .Navegador--small nav {
-      display: flex;
-      flex-direction: column; /* Alinear los elementos del menú vertical en columna */
-      align-items: center; /* Centrar los elementos horizontalmente dentro del menú */
+        display: flex;
+        flex-direction: column; /* Alinear los elementos del menú vertical en columna */
+        align-items: center; /* Centrar los elementos horizontalmente dentro del menú */
     }
-  
+
     .Navegador--small ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column; /* Alinear los elementos del menú vertical en columna */
-      align-items: center; /* Centrar los elementos horizontalmente dentro del menú */
+        list-style: none;
+        display: flex;
+        flex-direction: column; /* Alinear los elementos del menú vertical en columna */
+        align-items: center; /* Centrar los elementos horizontalmente dentro del menú */
     }
-  
+
     .Navegador--small li {
-      margin: 10px 0; /* Añadir espacio vertical entre los elementos del menú */
+        margin: 10px 0; /* Añadir espacio vertical entre los elementos del menú */
     }
-  
+
     .Navegador--small li a {
-      color: #82ccdd; /* Nuevo color del texto para enlaces del menú pequeño */
-      padding: 8px 15px; /* Espaciado interior del menú desplegable en dispositivos pequeños */
-      text-decoration: none; /* Quitar el subrayado del enlace */
-      list-style: none; /* Quitar los puntos de lista */
-      font-family: 'Arial', sans-serif; /* Nuevo tipo de letra */
-      font-size: 20px; /* Nuevo tamaño de fuente */
-      font-weight: bold; /* Negrita */
-      transition: color 0.3s ease; /* Efecto de transición en el cambio de color */
+        color: #82ccdd; /* Nuevo color del texto para enlaces del menú pequeño */
+        padding: 8px 15px; /* Espaciado interior del menú desplegable en dispositivos pequeños */
+        text-decoration: none; /* Quitar el subrayado del enlace */
+        list-style: none; /* Quitar los puntos de lista */
+        font-family: 'Arial', sans-serif; /* Nuevo tipo de letra */
+        font-size: 20px; /* Nuevo tamaño de fuente */
+        font-weight: bold; /* Negrita */
+        transition: color 0.3s ease; /* Efecto de transición en el cambio de color */
     }
-  
+
     .Navegador--small li a:hover {
-      color: #fff; /* Nuevo color del texto al pasar el cursor sobre los enlaces */
-      background-color: #000; /* Nuevo color de fondo al pasar el cursor sobre los enlaces */
-      border-radius: 5px; /* Agregar bordes redondeados al menú desplegable */
-      padding: 8px 15px; /* Ajustar el espaciado del menú desplegable al pasar el cursor */
+        color: #fff; /* Nuevo color del texto al pasar el cursor sobre los enlaces */
+        background-color: #000; /* Nuevo color de fondo al pasar el cursor sobre los enlaces */
+        border-radius: 5px; /* Agregar bordes redondeados al menú desplegable */
+        padding: 8px 15px; /* Ajustar el espaciado del menú desplegable al pasar el cursor */
     }
-  }
-  
-  /* Estilos para el Navegador de dispositivos grandes (mayor a 1024px) */
-  @media screen and (min-width: 1025px) {
+}
+
+/* Estilos para el Navegador de dispositivos grandes (mayor a 1024px) */
+@media screen and (min-width: 1025px) {
     .Navegador--small {
-      display: none; /* Ocultar el Navegador de dispositivos pequeños */
+        display: none; /* Ocultar el Navegador de dispositivos pequeños */
     }
-  }
-  
-  /* Estilos para el Navegador de dispositivos pequeños (hasta 1024px) */
-  @media screen and (max-width: 1024px) {
+}
+
+/* Estilos para el Navegador de dispositivos pequeños (hasta 1024px) */
+@media screen and (max-width: 1024px) {
     .Navegador--large {
-      display: none; /* Ocultar el Navegador de dispositivos grandes */
+        display: none; /* Ocultar el Navegador de dispositivos grandes */
     }
-  }
-  
-  /* Estilos para la sección Artículos Reveladores */
-  .articulos {
+}
+
+/* Estilos para el navegador */
+.Navegador--large ul {
+    list-style: none; /* Quitar los puntos de lista */
+    display: flex;
+    align-items: center; /* Centrar verticalmente el contenido */
+}
+
+.Navegador--large li {
+    margin: 0 15px;
+    position: relative; /* Agregar posición relativa para el enfoque horizontal en hover */
+}
+
+.Navegador--large li a {
+    color: #82ccdd;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+    display: block; /* Convertir enlaces en bloques para ocupar todo el espacio disponible */
+}
+
+.Navegador--large li::before {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Ajustar la posición del efecto de hover */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Grosor del efecto de hover */
+    background-color: transparent; /* Color inicial del efecto de hover */
+    transition: background-color 0.3s ease; /* Transición del color del efecto de hover */
+}
+
+.Navegador--large li:hover::before {
+    background-color: #82ccdd; /* Color del efecto de hover al pasar el cursor sobre el enlace */
+}
+
+/* Estilos para la sección Artículos Reveladores */
+.articulos {
     background-color: #0a3d62; /* Mismo color que el nav (más oscuro) */
     color: #dfe6e9; /* Color del texto (más claro) */
     padding: 20px;
-  }
-  
-  /* Estilos para la lista de artículos */
-  .ListaDeArticulos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  /* Estilos para cada artículo */
-  .ListaDeArticulos article {
-    width: 430px;
-    max-width: 100%;
-    margin-bottom: 20px;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-  
-  /* Estilos para las imágenes dentro de los artículos */
-  .ListaDeArticulos img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  /* Estilos para los títulos dentro de los artículos */
-  .ListaDeArticulos h4 {
-    font-family: "Arial", sans-serif; /* Tipo de letra */
-    color: #dfe6e9; /* Color del texto (más claro) */
-    margin-bottom: 10px;
-  }
-  
-  /* Estilo para los enlaces visitados */
-  .ListaDeArticulos a:visited {
-    color: #b2bec3; /* Color del texto para enlaces visitados (más claro) */
-  }
-  
-  /* Estilos para los párrafos */
-  .ListaDeArticulos p {
-    font-family: "Arial", sans-serif; /* Tipo de letra */
-    color: #dfe6e9; /* Color del texto (más claro) */
-    margin-bottom: 10px;
-    text-decoration: none; /* Sin subrayado para todos los párrafos */
-  }
-  
-  /* Estilos para los párrafos dentro de un elemento strong */
-  .ListaDeArticulos strong p {
-    text-decoration: none; /* Sin subrayado para los párrafos dentro de strong */
-  }
-  
-  /* Estilos para los enlaces */
-  .ListaDeArticulos a {
-    color: #82ccdd; /* Color del texto (más claro) */
-    text-decoration: none; /* Sin subrayado para los enlaces */
-  }
-  
-  /* Estilo para los enlaces visitados */
-  .ListaDeArticulos a:visited {
-    color: #b2bec3; /* Color del texto para enlaces visitados (más claro) */
-  }
+}
 
-  /* Estilos para la lista de artículos */
+/* Estilos para la lista de artículos */
 .ListaDeArticulos {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-  }
-  
-  /* Estilos para cada artículo */
-  .ListaDeArticulos article {
-    width: 100%; /* Modificamos el ancho para que ocupe todo el espacio en dispositivos móviles */
-    max-width: 430px; /* Agregamos un ancho máximo para evitar que los artículos se extiendan demasiado */
+}
+
+/* Estilos para cada artículo */
+.ListaDeArticulos article {
+    width: 100%;
+    max-width: 430px;
     margin-bottom: 20px;
     padding: 10px;
     box-sizing: border-box;
-  }
-  
-  /* Ajuste para dispositivos con resoluciones más pequeñas, como ¡Pad mini (768 x 1024) o ¡Pad Air (820 x 1180) */
-  @media screen and (max-width: 820px) {
+}
+
+/* Estilos para las imágenes dentro de los artículos */
+.ListaDeArticulos img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Estilos para los títulos dentro de los artículos */
+.ListaDeArticulos h4 {
+    font-family: "Arial", sans-serif; /* Tipo de letra */
+    color: #dfe6e9; /* Color del texto (más claro) */
+    margin-bottom: 10px;
+}
+
+/* Estilo para los enlaces visitados */
+.ListaDeArticulos a:visited {
+    color: #b2bec3; /* Color del texto para enlaces visitados (más claro) */
+}
+
+/* Estilos para los párrafos */
+.ListaDeArticulos p {
+    font-family: "Arial", sans-serif; /* Tipo de letra */
+    color: #dfe6e9; /* Color del texto (más claro) */
+    margin-bottom: 10px;
+    text-decoration: none; /* Sin subrayado para todos los párrafos */
+}
+
+/* Estilos para los párrafos dentro de un elemento strong */
+.ListaDeArticulos strong p {
+    text-decoration: none; /* Sin subrayado para los párrafos dentro de strong */
+}
+
+/* Estilos para los enlaces */
+.ListaDeArticulos a {
+    color: #82ccdd; /* Color del texto (más claro) */
+    text-decoration: none; /* Sin subrayado para los enlaces */
+}
+
+/* Estilo para los enlaces visitados */
+.ListaDeArticulos a:visited {
+    color: #b2bec3; /* Color del texto para enlaces visitados (más claro) */
+}
+
+/* Ajuste para dispositivos con resoluciones más pequeñas, como iPad mini (768 x 1024) o iPad Air (820 x 1180) */
+@media screen and (max-width: 820px) {
     .ListaDeArticulos article {
-      max-width: calc(50% - 20px); /* Mostramos dos artículos por fila en lugar de tres */
+        max-width: calc(50% - 20px); /* Mostramos dos artículos por fila en lugar de tres */
     }
-  }
-  
-  /* Ajuste para dispositivos móviles más pequeños */
-  @media screen and (max-width: 480px) {
+}
+
+/* Ajuste para dispositivos móviles más pequeños */
+@media screen and (max-width: 480px) {
     .ListaDeArticulos article {
-      max-width: 100%; /* Mostramos un artículo a pantalla completa */
+        max-width: 100%; /* Mostramos un artículo a pantalla completa */
     }
-  }
-  
-  
-  /* Estilos del acerca de nosotros */
-  .about {
+}
+
+/* Estilos del acerca de nosotros */
+.about {
     margin-top: 30px;
-  }
-  
-  .about h2 {
+}
+
+.about h2 {
     margin-bottom: 20px;
-  }
-  
-  .Banner {
+}
+
+.Banner {
     width: 100%;
     max-width: 100%;
-  }
-  
-  .Banner img {
+}
+
+.Banner img {
     width: 100%;
     height: auto;
-  }
-  
-  /* Estilos para el título 1 */
-  .Titulo1 {
+}
+
+/* Estilos para el título 1 */
+.Titulo1 {
     text-align: center; /* Centrar el contenido del div */
     margin: 20px 0; /* Agregar un margen superior e inferior para separar el título */
-  }
-  
-  .Titulo1 h1 {
+}
+
+.Titulo1 h1 {
     font-family: "Times New Roman", serif;
     font-size: 36px; /* Tamaño de fuente del título */
     font-weight: bold; /* Negrita */
-  }
-  
-  /* Estilos para la sección Acerca de nosotros */
-  .nosotros {
+}
+
+/* Estilos para la sección Acerca de nosotros */
+.nosotros {
     background-color: #636e72; /* Mismo color que el nav (más oscuro) */
     color: #dfe6e9; /* Color del texto (más claro) */
     padding: 20px;
     text-align: center; /* Centrar el contenido */
-  }
-  
-  /* Estilos para el párrafo dentro de la sección Acerca de nosotros */
-  .nosotros p {
+}
+
+/* Estilos para el párrafo dentro de la sección Acerca de nosotros */
+.nosotros p {
     font-family: "Arial", sans-serif;
     text-align: center;
-  }
-  
-  /* Estilos generales del footer */
+}
+
+/* Estilos generales del footer */
 footer {
     display: flex;
     align-items: center;
@@ -278,37 +302,36 @@ footer {
     background-color: #000; /* Color de fondo del footer (más oscuro) */
     color: #dfe6e9; /* Color del texto del footer (más claro) */
     padding: 10px;
-  }
-  
-  /* Estilos para las redes sociales */
-  .redes-sociales {
+}
+
+/* Estilos para las redes sociales */
+.redes-sociales {
     display: flex;
     align-items: center;
-  }
-  
-  .redes-sociales a {
+}
+
+.redes-sociales a {
     color: #dfe6e9; /* Color del texto (más claro) */
     text-decoration: none;
     font-size: 24px;
     margin-right: 10px;
-  }
-  
-  /* Estilos para el párrafo dentro del footer */
-  footer p {
+}
+
+/* Estilos para el párrafo dentro del footer */
+footer p {
     font-family: "Arial", sans-serif;
     text-align: center; /* Alinear el texto al centro en todos los dispositivos */
     margin: 0; /* Eliminar los márgenes para evitar espacios innecesarios */
-  }
-  
-  /* Ajuste para dispositivos con resoluciones más pequeñas, como ¡Pad Air (820 x 1180) */
-  @media screen and (max-width: 820px) {
+}
+
+/* Ajuste para dispositivos con resoluciones más pequeñas, como iPad Air (820 x 1180) */
+@media screen and (max-width: 820px) {
     footer {
-      flex-direction: column; /* Mostrar los elementos en columna en dispositivos más pequeños */
-      align-items: center; /* Alinear todo al centro verticalmente */
+        flex-direction: column; /* Mostrar los elementos en columna en dispositivos más pequeños */
+        align-items: center; /* Alinear todo al centro verticalmente */
     }
     
     .redes-sociales {
-      margin-bottom: 10px; /* Agregar un margen inferior para separar las redes sociales del párrafo */
+        margin-bottom: 10px; /* Agregar un margen inferior para separar las redes sociales del párrafo */
     }
-  }
-  
+}

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Old Wisdom</title>
+    <title>Contacto</title>
     <link rel="icon" href="./Imagenes/LogoOW.jpeg" type="image/png">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -27,7 +27,6 @@
             </nav>
         </div>
     </header>
-
     <main>
         <div class="container">
             <!-- Banner -->
@@ -36,35 +35,37 @@
                 <img src="./Imagenes/Banner2.jpeg" alt="Artículo destacado">
                 </a>
             </section>
-            <section class="intro">
-                <h2>Bienvenido a tu fuente confiable de predicciones de trading</h2>
-                <p>En nuestro blog encontrarás análisis detallados y recomendaciones para maximizar tus inversiones.</p>
-            </section>
-
-            <section class="articles">
-                <article>
-                    <h2><a href="articulo1.html">Predicciones de Mercado para Julio 2024: 5 Acciones a Tener en Cuenta</a></h2>
-                    <p>En este artículo, analizamos cinco acciones que muestran un gran potencial de crecimiento en el próximo mes...</p>
-                </article>
-                <article>
-                    <h2><a href="articulo2.html">Análisis Técnico del EUR/USD: ¿Qué Esperar en el Próximo Mes?</a></h2>
-                    <p>Un análisis detallado de la pareja de divisas EUR/USD y las posibles tendencias para el próximo mes...</p>
-                </article>
-                <!-- Añade más artículos según sea necesario -->
+            <section class="content">
+                <h2>Contacto</h2>
+                <form action="send_contact.php" method="post">
+                    <div>
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <div>
+                        <button type="submit">Enviar</button>
+                    </div>
+                </form>
             </section>
         </div>
     </main>
 
-    <!-- Pie de página -->
     <footer>
         <div class="redes-sociales">
-            <a href="https://www.facebook.com/ishie.exuxpery" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://x.com/exuxpery7935" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.youtube.com/channel/UCiHCfnliR9wTMa2MgzjUwxw" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.instagram.com/celsusperls/" target="_blank"><i class="fab fa-instagram"></i></a>
-          </div>
+          <a href="https://www.facebook.com/ishie.exuxpery" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://x.com/exuxpery7935" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.youtube.com/channel/UCiHCfnliR9wTMa2MgzjUwxw" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.instagram.com/celsusperls/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
         <p>Derechos de autor © 2023 Old Wisdom. Creado por Jean Ryant Ortega Anzo y Elizabeth (Mi chica). Todos los derechos reservados.</p>
-      </footer>
-
+    </footer>
 </body>
 </html>
