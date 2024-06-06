@@ -1,3 +1,17 @@
+body {
+  background-color: blue;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+header {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
 /* Estilo para el enfoque horizontal en hover */
 @media only screen and (min-width: 768px) {
     ul li {
