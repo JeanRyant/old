@@ -1,0 +1,87 @@
+body {
+  background-color: rgb(136, 0, 0);
+  font-family: 'Times New Roman', Times, serif;
+  padding: 12%;
+  margin: 0;
+}
+
+header {
+  background-image: url('./Imagenes/Banner2.jpeg');
+  background-size: cover; /* Ajusta la imagen para cubrir completamente el header */
+  background-position: center; /* Centra la imagen en el header */
+  font-size: x-large; 
+  text-align: center;
+  padding: 20px;
+  color: rgb(238, 234, 25);
+}
+
+header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+header ul li:last-child {
+  margin-right: 0; /* Elimina el margen derecho del último elemento */
+}
+
+header ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: x-large;
+  transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+  color: whitesmoke;
+}
+
+main {
+  font-size: x-large;
+  text-align: center;
+  background-color: rgb(125, 64, 124);
+  color: rgb(140, 249, 107);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(88, 51, 140);
+  color: beige;
+  text-align: center;
+  padding: 10px;
+  font-size: x-large;
+  width: 100%; /* Ajusta según sea necesario */
+}
+
+
+/* Añadiendo estilo a los enlaces */
+a, a:visited {
+  color: inherit; /* Hereda el color del elemento padre */
+  text-decoration: none; /* Elimina el subrayado si no lo deseas */
+}
+
+/* Estilo para el enfoque horizontal en hover */
+@media only screen and (min-width: 768px) {  
+  ul li {
+    display: inline-block;
+    margin-right: 20px; /* Espacio entre elementos */
+  }
+
+  ul li:hover {
+    color: black;
+  }
+
+  ul li:visited {
+    color: black;
+  }
+}
