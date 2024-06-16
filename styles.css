@@ -42,15 +42,55 @@ header ul li a:hover {
 }
 
 main {
-  font-size: 1.25rem;
+  font-size: 1.25rem; /* Tamaño de fuente un poco más grande */
   text-align: left; /* Alineación izquierda para mejor legibilidad */
   background-color: #2c2c2c; /* Fondo más oscuro */
-  color: #f0f0f0;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para elevar el contenido */
-  margin-bottom: 60px; /* Espacio para no superponerse con el footer fijo */
+  color: #f0f0f0; /* Texto claro */
+  padding: 30px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin-bottom: 60px; /* Espacio para no superponerse con el footer */
+  line-height: 1.6; /* Altura de línea para mejor legibilidad */
+  position: relative; /* Para elementos pseudo */
+  overflow: hidden; /* Ocultar elementos que sobresalen */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
 }
+
+main::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 70%);
+  transition: transform 0.5s ease;
+  transform: scale(0);
+  pointer-events: none; /* Para que no interfiera con los eventos del ratón */
+}
+
+main:hover::before {
+  transform: scale(1);
+}
+
+main:hover {
+  transform: scale(1.02); /* Escala ligeramente el contenedor */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+}
+
+/* Efectos adicionales en los enlaces dentro de main */
+main a {
+  color: #ffa500; /* Color de enlace */
+  text-decoration: none;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+main a:hover {
+  color: #fff;
+  border-bottom: 2px solid #ffa500;
+}
+
 
 footer {
   position: fixed;
