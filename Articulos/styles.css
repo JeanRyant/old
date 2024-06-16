@@ -1,87 +1,86 @@
 body {
-  background-color: rgb(136, 0, 0);
-  font-family: 'Times New Roman', Times, serif;
-  padding: 12%;
+  background-color: #1e1e1e; /* Color de fondo oscuro moderno */
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* Fuente moderna */
+  color: #f0f0f0; /* Color de texto claro para buen contraste */
+  padding: 5%; /* Reducción del padding para un diseño más compacto */
   margin: 0;
 }
 
 header {
   background-image: url('./Imagenes/Banner2.jpeg');
-  background-size: cover; /* Ajusta la imagen para cubrir completamente el header */
-  background-position: center; /* Centra la imagen en el header */
-  font-size: x-large; 
+  background-size: cover;
+  background-position: center;
+  font-size: 1.5rem; /* Usar rem para un tamaño de fuente relativo */
   text-align: center;
   padding: 20px;
-  color: rgb(238, 234, 25);
+  color: #eaea1a; /* Color ligeramente ajustado */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 header ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 header ul li {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-header ul li:last-child {
-  margin-right: 0; /* Elimina el margen derecho del último elemento */
+  margin: 0 15px; /* Espaciado horizontal */
 }
 
 header ul li a {
-  color: black;
+  color: #fff; /* Color de texto blanco para contraste */
   text-decoration: none;
-  font-size: x-large;
-  transition: color 0.3s ease;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 header ul li a:hover {
-  color: whitesmoke;
+  color: #ffa500; /* Color de hover más moderno */
+  transform: scale(1.1); /* Efecto de escala suave */
 }
 
 main {
-  font-size: x-large;
-  text-align: center;
-  background-color: rgb(125, 64, 124);
-  color: rgb(140, 249, 107);
-  padding: 20px;
+  font-size: 1.25rem;
+  text-align: left; /* Alineación izquierda para mejor legibilidad */
+  background-color: #2c2c2c; /* Fondo más oscuro */
+  color: #f0f0f0;
+  padding: 30px;
   border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para elevar el contenido */
+  margin-bottom: 60px; /* Espacio para no superponerse con el footer fijo */
 }
 
 footer {
   position: fixed;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgb(88, 51, 140);
-  color: beige;
+  left: 0;
+  width: 100%;
+  background-color: #3b3b3b; /* Fondo oscuro para el footer */
+  color: #ddd; /* Texto claro */
   text-align: center;
-  padding: 10px;
-  font-size: x-large;
-  width: 100%; /* Ajusta según sea necesario */
+  padding: 15px;
+  font-size: 1rem;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el footer */
 }
-
 
 /* Añadiendo estilo a los enlaces */
 a, a:visited {
-  color: inherit; /* Hereda el color del elemento padre */
-  text-decoration: none; /* Elimina el subrayado si no lo deseas */
+  color: inherit;
+  text-decoration: none;
 }
 
-/* Estilo para el enfoque horizontal en hover */
-@media only screen and (min-width: 768px) {  
-  ul li {
-    display: inline-block;
-    margin-right: 20px; /* Espacio entre elementos */
+@media only screen and (min-width: 768px) {
+  header ul li {
+    margin-right: 20px;
   }
 
-  ul li:hover {
-    color: black;
+  header ul li:hover {
+    color: #ffa500;
   }
 
-  ul li:visited {
-    color: black;
+  header ul li:visited {
+    color: #fff;
   }
 }
