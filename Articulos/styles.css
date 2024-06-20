@@ -110,13 +110,20 @@ a, a:visited {
   text-decoration: none;
 }
 
-/* Media Queries para dispositivos móviles */
+/* Ajuste de las imágenes en los artículos */
+.content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
 
+/* Media Queries para dispositivos móviles */
 @media only screen and (max-width: 768px) {
   header {
     font-size: 1.2rem;
   }
-  
+
   header ul li {
     margin: 0 8px;
   }
@@ -137,7 +144,7 @@ a, a:visited {
   header {
     font-size: 1rem;
   }
-  
+
   header ul li {
     margin: 0 5px;
   }
