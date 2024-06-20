@@ -127,6 +127,16 @@ a, a:visited {
     border-radius: 6px;
   }
 
+
+  /* Ajuste de las imágenes en los artículos */
+.content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
   footer {
     padding: 8px;
     font-size: 0.8rem;
@@ -152,4 +162,12 @@ a, a:visited {
     padding: 5px;
     font-size: 0.7rem;
   }
+}
+
+/* Ajuste de las imágenes en los artículos */
+.content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
