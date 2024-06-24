@@ -91,6 +91,14 @@ main a:hover {
   border-bottom: 1px solid #ffa500;
 }
 
+/* Ajuste de las imágenes en los artículos */
+.content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 footer {
   position: fixed;
   bottom: 0;
